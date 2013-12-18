@@ -13,18 +13,18 @@ Linklabel:
 http://www.blagoev.com/Blog/post/Building-a-WPF-LinkLabel-control.aspx
 
 NOTE: I highly recommend properly binding the IsEnabled property in the Style. If you don't, having the IsEnabled property set to false on initial load and then changing it later will not properly enable the control.
-To be more specific, add the <span style="color: #ff0000;">highlighted </span>line in the Template setter:
-<p style="padding-left: 30px;">&lt;Hyperlink
+To be more specific, add the highlighted line in the Template setter:
+&lt;Hyperlink
 x:Name="PART_InnerHyperlink"
 NavigateUri="{Binding RelativeSource= {RelativeSource TemplatedParent}, Path=Url}"
 Style= "{Binding RelativeSource= {RelativeSource TemplatedParent}, Path=HyperlinkStyle}"
 Command="{Binding RelativeSource= {RelativeSource TemplatedParent}, Path=Command}"
 CommandParameter="{Binding RelativeSource= {RelativeSource TemplatedParent}, Path=CommandParameter}"
 CommandTarget="{Binding RelativeSource= {RelativeSource TemplatedParent}, Path=CommandTarget}"
-<span style="color: #ff0000;">IsEnabled="{Binding RelativeSource= {RelativeSource TemplatedParent}, Path=IsEnabled}"</span>&gt;
+IsEnabled="{Binding RelativeSource= {RelativeSource TemplatedParent}, Path=IsEnabled}"&gt;
 &lt;local:BindableRun
 BoundText="{Binding RelativeSource= {RelativeSource TemplatedParent}, Path=Content}"/&gt;
-&lt;/Hyperlink&gt;</p>
+&lt;/Hyperlink&gt;
 
 SearchTextBox:
 http://davidowens.wordpress.com/2009/02/18/wpf-search-text-box/
