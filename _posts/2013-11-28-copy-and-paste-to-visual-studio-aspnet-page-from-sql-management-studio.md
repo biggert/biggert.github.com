@@ -19,7 +19,7 @@ So I was doing some grunt work of making a few textboxes which will be filled fr
 6. That’s it! You will have a simple Gridview with the fields you selected, a SqlDataSource underneath it, and a connection string in your Web.Config.
 
 Here’s an example of the resulting ASPX output:
-<pre name="code" class="html">
+```html
 &lt;asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource2"
 EmptyDataText="There are no data records to display." AutoGenerateColumns="False"&gt;
 &lt;Columns&gt;
@@ -35,4 +35,4 @@ HeaderText="OutputFilesPath"&gt;&lt;/asp:BoundField&gt;
 ConnectionString=”&lt;%$ ConnectionStrings:MPConnectionString1 %&gt;”
 ProviderName=”&lt;%$ ConnectionStrings:MPConnectionString1.ProviderName %&gt;”&gt;
 &lt;/asp:SqlDataSource&gt;
-</pre>
+```
