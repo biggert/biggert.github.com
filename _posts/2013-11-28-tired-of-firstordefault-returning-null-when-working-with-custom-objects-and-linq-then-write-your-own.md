@@ -12,7 +12,7 @@ So I finally got to work with LINQ in our current .NET 3.5 project as I haven't 
 As I being working with this, I specifically came across a few use-case scenarios for FirstOrDefault(). I could use this function with a conditional clause and knock out a lot of clunk codeblocks that I used in different parts of the application. Then I quickly found the pitfall of using this with my custom object... it returned NULL if not found. This required me to write 2 more lines of code to checks for NULLs which I felt was a bit wasteful so I was steered by Google to <a href="http://blog.dynamicprogrammer.com/2009/05/28/FirstOrNullObjectExtensionMethodForIEnumerableAndFirstOrNew.aspx">http://blog.dynamicprogrammer.com/2009/05/28/FirstOrNullObjectExtensionMethodForIEnumerableAndFirstOrNew.aspx</a> which taught me to write my own FirstOrDefault type of function which allows me to define the default value that is returned if a value is not found. If you want actual information about it, please read his post above. I'm just providing the code I wrote as a result of reading his excellent post.
 
 Here is my LINQHelper class I came up with. These extension methods give me the ability to prevent the returning of a NULL object with my custom classes which reduces the amount of code I have to write in the long run. I also went ahead and extended the LastOrDefault methods as well.
-<pre name="code" class="csharp">
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -91,5 +91,5 @@ namespace BusinessLogic
         }
     }
 }
-</pre>
+```
 Once again, this information was gathered from Mr. Garcia's blog at <a href="http://blog.dynamicprogrammer.com">http://blog.dynamicprogrammer.com</a>. I give him full credit for this information laid out in a very explanatory blog post.
