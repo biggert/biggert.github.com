@@ -16,7 +16,8 @@ To be more specific about the scenario I needed to use this in, I simply wanted 
 &nbsp;
 
 Use the information on this page, I came up with this query:
-<pre lang="sql">DECLARE @SQL NVARCHAR(MAX)
+```sql
+DECLARE @SQL NVARCHAR(MAX)
 SELECT @SQL = COALESCE(@SQL,'') + '
 BEGIN TRY
 IF ((SELECT @COUNT) &lt; 2)
@@ -36,7 +37,8 @@ END CATCH
 FROM sys.databases
 ORDER BY name
 SELECT @SQL = 'DECLARE @count int; SET @count = 0;' + @SQL
-EXECUTE(@SQL)</pre>
+EXECUTE(@SQL)
+```
 &nbsp;
 
 So with that we've got a quick and dirty SQL statement that simply checks each database for the occurence of MyTable. If 2 or more databases have that object, we return the number and bail.
