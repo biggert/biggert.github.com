@@ -23,7 +23,7 @@ For some reason unknown to me and not worth my time to investigate, it doesn't w
 
 Forgive my quick and dirty coding but it gets the job done... I'm sure you could easily spawn a much more generic code to do this:
 
-<pre name="code" class="c#">
+```csharp
         private void uxFieldMappingsDataGrid_CurrentCellChanged(object sender, EventArgs e)
         {
             uxFieldMappingsDataGrid.BeginEdit();
@@ -37,6 +37,6 @@ Forgive my quick and dirty coding but it gets the job done... I'm sure you could
                 destinationTextBox.Focus();
             }
         }
-</pre>
+```
 
 You can see where I climb the visual tree down to the text box. Very simple code for a very specific reason that I'm sure you can mold to make your own if you find that you are having the same problems as I am (and using code-behind to solve it isn't against your religion).
