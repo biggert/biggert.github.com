@@ -13,7 +13,8 @@ I guess I'll start this off the fun way... with a recent issue I was involved wi
 After spending a little time Googling and realizing that ListBox's ScrollIntoView did nothing, I found an excellent forum post that detailed the notion of directly accessing the scrollviewer inside the listbox Once I had access to that, I could scroll all I wanted to.
 
 I basically just added this function:
-<pre class="csharp">        private childItem FindVisualChild&lt;childItem&gt;(DependencyObject obj) where childItem : DependencyObject
+```csharp
+private childItem FindVisualChild<childItem>(DependencyObject obj) where childItem : DependencyObject
         {
             for (int i = 0; i &lt; VisualTreeHelper.GetChildrenCount(obj); i++)
             {
@@ -32,9 +33,12 @@ I basically just added this function:
                 }
             }
             return null;
-        }</pre>
+        }
+```        
 Adding a call to it to walk the visual tree for the scrollviewer:
-<pre lang="csharp">ScrollViewer sv = FindVisualChild&lt;ScrollViewer&gt;(uxListBox);</pre>
+```csharp
+ScrollViewer sv = FindVisualChild&lt;ScrollViewer&gt;(uxListBox);
+```
 And that's it! Now I can sv.ScrollToTop(), ScrollToBottom(), or even specific vertical/horizontal offsets. I do have to make a call to ListBox.UpdateLayout() to refresh but it's all good now... crisis #93487 averted!
 
 Thanks to <a href="http://channel9.msdn.com/forums/TechOff/261274-Accessing-WPF-Control-parts-from-code/" target="_blank">this post</a> for guiding me to the light!
