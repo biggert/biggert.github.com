@@ -20,9 +20,9 @@ So, just to clearly put it, <strong>turn off the sidebar in Windows 7 for optima
 You can turn off the sidebar by using the following instructions:
 
 1. Open the control panel and click Programs and then Programs And Features. On the left panel, you'll see "Turn Windows features on or off".
-<p style="text-align: left; padding-left: 60px;">﻿<a href="uploads/2010/06/windows71.png"><img class="alignnone size-medium wp-image-258" title="windows71" src="uploads/2010/06/windows71-300x90.png" alt="" width="300" height="90" /></a></p>
+<p style="text-align: left; padding-left: 60px;">﻿<a href="http://i.imgur.com/PNpMWgw.png"><img class="alignnone size-medium wp-image-258" title="windows71" src="http://i.imgur.com/PNpMWgw.png" alt="" width="300" height="90" /></a></p>
 <p style="text-align: left;">2. Click the button/link and uncheck 'Windows Gadget Platform'</p>
-<p style="text-align: left; padding-left: 60px;"><a href="uploads/2010/06/windows72.png"><img class="alignnone size-medium wp-image-259" title="windows72" src="uploads/2010/06/windows72-300x262.png" alt="" width="300" height="262" /></a></p>
+<p style="text-align: left; padding-left: 60px;"><a href="http://i.imgur.com/cBhyhkf.png"><img class="alignnone size-medium wp-image-259" title="windows72" src="http://i.imgur.com/cBhyhkf.png" alt="" width="300" height="262" /></a></p>
 <p style="text-align: left;">3. Click OK and you're finished.</p>
 <p style="text-align: left;"></p>
 <p style="text-align: left;">The only bad thing is you don't get to use the sidebar :)</p>
