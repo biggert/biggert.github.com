@@ -16,10 +16,7 @@ After moving on, I’ve continued to explore the knowledge of bulk loading data 
 If you have any problems, questions, or just comments about this stored procedure, feel free to shoot me an email. Also, if you have any changes/addition you’d like to add, I’ll be happy to take your suggestions and add it in.
 </p>
 <p>
-To contact me, click <a href="http://www.cwithb.com/contact/" target="_blank">here</a>
-</p>
-<p>
-For a quick download link, click <a title="CreateDelimitedTextFilev1.6.zip" href="uploads/2009/06/createdelimitedtextfilev16.zip">here</a>.
+For a quick download link, click <a title="CreateDelimitedTextFilev1.6.zip" href="https://github.com/biggert/CreateDelimitedTextFileSQL2005SPROC/archive/1.6.zip">here</a>.
 </p>
 <span style="text-decoration: underline;"><strong>Description</strong></span>
 <p>
@@ -272,7 +269,7 @@ I haven’t run this stored procedure through the ringer and made sure every dat
 I had a visitor report a problem and when fixing this, I found 2 additional problems that I will work on in the near future. First, it doesn’t seem to like the ntext data type. I haven’t tested if this is true for the text and image data type but since they are the same in the underlying SQL, they may have problems. Secondly, specifying the database name before the table will not work. It is coded in a way where the stored procedure assumes the database which is being used to run the stored procedure contains the table you are wanted to export. I will update this functionality in the future to allow a database name to be specified through the normal way such as “[ExampleDB].dbo.[ExampleTable]” and/or with a parameter. In the meantime, just run the “USE [Example Database]” command before executing the stored procedure if possible. (Feel free to fix it yourself though by doing a find replace on db_name() with your own database name)
 </p>
 <p>
-<a title="createdelimitedtextfile.zip" href="uploads/2009/06/createdelimitedtextfilev16.zip">Download Script</a>
+<a title="createdelimitedtextfile.zip" href="https://github.com/biggert/CreateDelimitedTextFileSQL2005SPROC/archive/1.6.zip">Download Script</a>
 </p>
 <p>
 Update (10/22/2007): For those having problems with the permissions needed on the SQL server to execute this stored procedure, run the following script:
